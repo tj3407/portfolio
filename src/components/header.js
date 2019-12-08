@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     background: `white`,
     marginBottom: `1.45rem`,
-    margin: `0 auto`,
+    margin: `20 auto`,
     padding: `1.45rem 1.0875rem`,
     boxShadow: "0 !important",
   },
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginTop: 30,
-    color: "gray",
+    color: "#a77b58",
     fontFamily: "'Fira Sans', sans-serif",
     fontWeight: 900,
   },
@@ -45,7 +45,10 @@ const Header = ({ siteTitle }) => {
   const classes = useStyles()
 
   return (
-    <AppBar position="static" className={`${classes.root} header`}>
+    // <AppBar position="static" className={`${classes.root} header`}>
+    <header className={`${classes.root} header`}>
+      
+    {/* </header> */}
       <Grid container className="header-container">
         <Grid item>
           <Avatar
@@ -94,7 +97,8 @@ const Header = ({ siteTitle }) => {
           </div>
         </Grid>
       </Grid>
-    </AppBar>
+      </header>
+    // </AppBar>
   )
 }
 
