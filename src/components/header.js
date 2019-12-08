@@ -4,43 +4,41 @@ import React from "react"
 import AppBar from "@material-ui/core/AppBar"
 import { makeStyles } from "@material-ui/core/styles"
 import { Typography, Avatar, Grid, Button } from "@material-ui/core"
-import SendIcon from '@material-ui/icons/Send';
+import SendIcon from "@material-ui/icons/Send"
+import Social from "./social"
 
 const useStyles = makeStyles(theme => ({
   root: {
     background: `white`,
     marginBottom: `1.45rem`,
     margin: `0 auto`,
-    // maxWidth: 1280,
     padding: `1.45rem 1.0875rem`,
-    // display: "flex",
-    // verticalAlign: "middle",
-    boxShadow: "0 !important"
+    boxShadow: "0 !important",
   },
   avatar: {
     width: 160,
     height: 160,
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
   },
   title: {
     marginTop: 30,
     color: "gray",
-    fontFamily: "'Calistoga', sans-serif",
-    fontWeight: 700,
+    fontFamily: "'Fira Sans', sans-serif",
+    fontWeight: 900,
   },
   button: {
-    padding: '10px',
-    marginTop: 10
+    padding: "10px",
+    marginTop: 10,
   },
   buttonContainer: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   secondaryTitle: {
-    marginBottom: 30
-  }
+    marginBottom: 20,
+  },
 }))
 
 const Header = ({ siteTitle }) => {
@@ -49,35 +47,47 @@ const Header = ({ siteTitle }) => {
   return (
     <AppBar position="static" className={`${classes.root} header`}>
       <Grid container className="header-container">
-        <Grid item >
+        <Grid item>
           <Avatar
             alt="Tey Jon Sornet"
             src="/static/images/pic1.png"
             className={classes.avatar}
             imgProps={{
-              style: { 
-                margin: "0 auto"
+              style: {
+                margin: "0 auto",
               },
             }}
           />
         </Grid>
-        <Grid item xs={6} sm={6} md={6} lg={8}>
+        <Grid item xs={12} sm={6} md={6} lg={8}>
           <div>
             <Typography variant="h4" className={classes.title}>
               Tey Jon Sornet
             </Typography>
-            <Typography variant="h5" color="textSecondary" className={classes.secondaryTitle}>
+            <Typography
+              variant="h5"
+              color="textSecondary"
+              className={classes.secondaryTitle}
+            >
               Front End Software Developer
             </Typography>
+            <Social />
           </div>
         </Grid>
-        <Grid item xs={12} sm={4} md={3} lg={2} className={classes.buttonContainer}>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          md={3}
+          lg={2}
+          className={classes.buttonContainer}
+        >
           <div>
             <Button
-              variant="contained"
-              color="secondary"
+              variant="outlined"
+              color="textPrimary"
               className={classes.button}
-              endIcon={<SendIcon />}
+              endIcon={<SendIcon style={{ marginRight: 5 }} />}
             >
               Contact Me
             </Button>
