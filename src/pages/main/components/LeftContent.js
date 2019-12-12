@@ -74,7 +74,7 @@ export default function LeftContent() {
         color="textSecondary"
         align="center"
       >
-        React, Gatsby
+        React, Gatsby, Material-UI, My Sports Feed API
       </Typography>
       <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
         <img src="/static/images/project1.jpg"></img>
@@ -92,6 +92,45 @@ export default function LeftContent() {
             size="large"
             startIcon={<ExitToAppIcon />}
             href="http://whosnapit.com/NFL-Fantasy-Football/"
+            target="_blank"
+        >
+            Demo
+        </Button>
+      </div>
+      <hr />
+      <Typography
+        variant="h5"
+        display="block"
+        color="textSecondary"
+        align="center"
+        classes={classes.bold}
+      >
+        MLB Stats App
+      </Typography>
+      <Typography
+        paragraph
+        display="block"
+        color="textSecondary"
+        align="center"
+      >
+        Angular 5, Bootstrap, My Sports Feed API
+      </Typography>
+      <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
+        <img src="/static/images/project2.jpg"></img>
+        <div className={classes.ribbon}>
+          <div class={classes.text}>New</div>
+        </div>
+      </div>
+      <Typography paragraph className={classes.bold}>
+        MLB stats application created using Angular 5, My Sports Feed api for data and Bootstrap for styling. 
+      </Typography>
+      <div className={classes.button}>
+        <Button
+            variant="outlined"
+            color="primary"
+            size="large"
+            startIcon={<ExitToAppIcon />}
+            href="http://tj-mlb-demo.herokuapp.com/"
             target="_blank"
         >
             Demo
