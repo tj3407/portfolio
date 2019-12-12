@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginTop: 30,
+    marginBottom: 10,
     color: "#a77b58",
     fontFamily: "'Fira Sans', sans-serif",
     fontWeight: 900,
@@ -64,7 +65,7 @@ const Header = ({ siteTitle }) => {
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={8}>
           <div>
-            <Typography variant="h4" className={classes.title}>
+            <Typography variant="h3" className={classes.title}>
               Tey Jon Sornet
             </Typography>
             <Typography
