@@ -2,6 +2,7 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { Typography, Button, Grid, Link } from "@material-ui/core"
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
+import GithubContent from "./GithubContent"
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -55,6 +56,7 @@ export default function LeftContent() {
   const classes = useStyle()
 
   return (
+    <>
     <div className={`${classes.root} left-content`}>
       <Typography variant="h4" display="block" style={{ marginBottom: "20px" }}>
         Projects
@@ -189,5 +191,12 @@ export default function LeftContent() {
         </Grid>
       </Grid>
     </div>
+    <div className={`${classes.root} left-content`}>
+      <Typography variant="h4" display="block" style={{ marginBottom: "20px" }}>
+        My GitHub
+      </Typography>
+      <GithubContent />
+    </div>
+    </>
   )
 }
