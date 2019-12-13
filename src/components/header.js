@@ -89,7 +89,7 @@ const Header = ({ siteTitle }) => {
           <div>
             <Button
               variant="outlined"
-              color="textPrimary"
+              color="default"
               className={classes.button}
               endIcon={<SendIcon style={{ marginRight: 5 }} />}
             >

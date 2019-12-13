@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import { Typography, Button } from "@material-ui/core"
+import { Typography, Button, Grid, Link } from "@material-ui/core"
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 
 const useStyle = makeStyles(theme => ({
@@ -44,11 +44,11 @@ const useStyle = makeStyles(theme => ({
   button: {
     textAlign: "center",
     marginBottom: 50,
-    marginTop: 30
+    marginTop: 30,
   },
   bold: {
-    // fontWeight: "500"
-  }
+    fontWeight: "600"
+  },
 }))
 
 export default function LeftContent() {
@@ -56,7 +56,7 @@ export default function LeftContent() {
 
   return (
     <div className={`${classes.root} left-content`}>
-      <Typography variant="h4" display="block" style={{marginBottom: "20px"}}>
+      <Typography variant="h4" display="block" style={{ marginBottom: "20px" }}>
         Projects
       </Typography>
       <Typography
@@ -64,7 +64,7 @@ export default function LeftContent() {
         display="block"
         color="textSecondary"
         align="center"
-        classes={classes.bold}
+        className={classes.bold}
       >
         NFL App
       </Typography>
@@ -79,64 +79,115 @@ export default function LeftContent() {
       <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
         <img src="/static/images/project1.jpg"></img>
         <div className={classes.ribbon}>
-          <div class={classes.text}>New</div>
+          <div className={classes.text}>New</div>
         </div>
       </div>
-      <Typography paragraph className={classes.bold}>
-        React application created using Gatsby and utilizing My Sports Feed api and Material-UI for styling. 
+      <Typography paragraph>
+        React application created using Gatsby and utilizing My Sports Feed api
+        and Material-UI for styling.
       </Typography>
       <div className={classes.button}>
         <Button
-            variant="outlined"
-            color="primary"
-            size="large"
-            startIcon={<ExitToAppIcon />}
-            href="http://whosnapit.com/NFL-Fantasy-Football/"
-            target="_blank"
+          variant="outlined"
+          color="primary"
+          size="large"
+          startIcon={<ExitToAppIcon />}
+          href="http://whosnapit.com/NFL-Fantasy-Football/"
+          target="_blank"
         >
-            Demo
+          Demo
         </Button>
       </div>
       <hr />
-      <Typography
-        variant="h5"
-        display="block"
-        color="textSecondary"
-        align="center"
-        classes={classes.bold}
+
+      <Grid
+        container
+        spacing={3}
+        style={{ paddingTop: "20px", marginBottom: "20px" }}
       >
-        MLB Stats App
-      </Typography>
-      <Typography
-        paragraph
-        display="block"
-        color="textSecondary"
-        align="center"
-      >
-        Angular 5, Bootstrap, My Sports Feed API
-      </Typography>
-      <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
-        <img src="/static/images/project2.jpg"></img>
-        <div className={classes.ribbon}>
-          <div class={classes.text}>New</div>
-        </div>
-      </div>
-      <Typography paragraph className={classes.bold}>
-        MLB stats application created using Angular 5, My Sports Feed api for data and Bootstrap for styling. 
-      </Typography>
-      <div className={classes.button}>
-        <Button
-            variant="outlined"
-            color="primary"
-            size="large"
-            startIcon={<ExitToAppIcon />}
-            href="http://tj-mlb-demo.herokuapp.com/"
-            target="_blank"
-        >
-            Demo
-        </Button>
-      </div>
+        <Grid item xs={12} lg={4}>
+          <div style={{ textAlign: "center" }}>
+            <img src="/static/images/project3.jpg"></img>
+          </div>
+        </Grid>
+
+        <Grid item xs={12} lg={8}>
+          <Typography
+            variant="h5"
+            display="block"
+            color="textSecondary"
+            align="left"
+            className={classes.bold}
+            style={{ marginBottom: "20px" }}
+          >
+            Simple eCommerce Page with Shopping Cart - vanilla JavaScript, jQuery, Bootstrap
+          </Typography>
+          <Typography paragraph>
+            Simple eCommerce page with shopping cart where product information
+            is loaded from a local json file. An option to choose between
+            localStorage or sessionStorage to store products that have been
+            added to cart to test persistency between browser tabs.
+          </Typography>
+          <div style={{ cursor: "pointer" }}>
+            <Link
+              href="http://whosnapit.com/ws-product-cards/"
+              target="_blank"
+              variant="h6"
+              display="inline"
+              style={{ verticalAlign: "middle", color: "#3AAA64" }}
+            >
+              <ExitToAppIcon
+                style={{ verticalAlign: "middle", color: "#3AAA64" }}
+              />{" "}
+              Try It
+            </Link>
+          </div>
+        </Grid>
+      </Grid>
       <hr />
+
+      <Grid
+        container
+        spacing={3}
+        style={{ paddingTop: "20px", marginBottom: "20px" }}
+      >
+        <Grid item xs={12} lg={4}>
+          <div style={{ textAlign: "center" }}>
+            <img src="/static/images/project2.jpg"></img>
+          </div>
+        </Grid>
+
+        <Grid item xs={12} lg={8}>
+          <Typography
+            variant="h5"
+            display="block"
+            color="textSecondary"
+            align="left"
+            className={classes.bold}
+            style={{ marginBottom: "20px" }}
+          >
+            MLB Stats App - Angular 5, Bootstrap, My Sports Feed API
+          </Typography>
+          <Typography paragraph>
+            MLB stats application created using Angular 5, My Sports Feed api
+            for data and Bootstrap for styling.
+          </Typography>
+          <div style={{ cursor: "pointer" }}>
+            <Link
+              href="http://tj-mlb-demo.herokuapp.com/"
+              target="_blank"
+              variant="h6"
+              display="inline"
+              style={{ verticalAlign: "middle", color: "#3AAA64" }}
+            >
+              <ExitToAppIcon
+                style={{ verticalAlign: "middle", color: "#3AAA64" }}
+              />{" "}
+              Try It
+            </Link>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   )
 }
