@@ -190,6 +190,17 @@ export default function LeftContent() {
           </div>
         </Grid>
       </Grid>
+      <hr />
+
+      <Grid
+        container
+        spacing={3}
+        style={{ paddingTop: "20px", marginBottom: "20px" }}
+      >
+        <Grid item xs={12}>
+          <Typography paragraph align="center" className={classes.bold}>...LOAD MORE</Typography>
+        </Grid>
+      </Grid>
     </div>
     <div className={`${classes.root} left-content`}>
       <Typography variant="h4" display="block" style={{ marginBottom: "20px" }}>

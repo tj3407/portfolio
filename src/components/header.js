@@ -46,10 +46,7 @@ const Header = ({ siteTitle }) => {
   const classes = useStyles()
 
   return (
-    // <AppBar position="static" className={`${classes.root} header`}>
     <header className={`${classes.root} header`}>
-      
-    {/* </header> */}
       <Grid container className="header-container">
         <Grid item>
           <Avatar
@@ -98,8 +95,7 @@ const Header = ({ siteTitle }) => {
           </div>
         </Grid>
       </Grid>
-      </header>
-    // </AppBar>
+    </header>
   )
 }
 
