@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Typography, Button, Grid, Link } from "@material-ui/core"
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 import GithubContent from "./GithubContent"
+import project1 from "../../../images/project1.jpg"
+import project2 from "../../../images/project2.jpg"
+import project3 from "../../../images/project3.jpg"
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -79,7 +82,7 @@ export default function LeftContent() {
         React, Gatsby, Material-UI, My Sports Feed API
       </Typography>
       <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
-        <img src="/static/images/project1.jpg"></img>
+        <img src={project1}></img>
         <div className={classes.ribbon}>
           <div className={classes.text}>New</div>
         </div>
@@ -109,7 +112,7 @@ export default function LeftContent() {
       >
         <Grid item xs={12} lg={4}>
           <div style={{ textAlign: "center" }}>
-            <img src="/static/images/project3.jpg"></img>
+            <img src={project3}></img>
           </div>
         </Grid>
 
@@ -155,7 +158,7 @@ export default function LeftContent() {
       >
         <Grid item xs={12} lg={4}>
           <div style={{ textAlign: "center" }}>
-            <img src="/static/images/project2.jpg"></img>
+            <img src={project2}></img>
           </div>
         </Grid>
 
