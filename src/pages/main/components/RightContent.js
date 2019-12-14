@@ -4,6 +4,7 @@ import { Typography } from "@material-ui/core"
 import LocationOnIcon from "@material-ui/icons/LocationOn"
 import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import LinkIcon from "@material-ui/icons/Link"
+import Time from "./Time"
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -28,6 +29,9 @@ export default function RightContent() {
   return (
     <div>
       <About />
+      <div className={classes.root}>
+        <Time />
+      </div>
       <Skills />
     </div>
   )
