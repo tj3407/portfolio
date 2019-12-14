@@ -1,7 +1,5 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import AppBar from "@material-ui/core/AppBar"
 import { makeStyles } from "@material-ui/core/styles"
 import { Typography, Avatar, Grid, Button } from "@material-ui/core"
 import SendIcon from "@material-ui/icons/Send"
@@ -47,7 +45,7 @@ const Header = ({ siteTitle }) => {
   const classes = useStyles()
 
   return (
-    <header className={`${classes.root} header`}>
+    <div className={`${classes.root} header`}>
       <Grid container className="header-container">
         <Grid item>
           <Avatar
@@ -96,7 +94,7 @@ const Header = ({ siteTitle }) => {
           </div>
         </Grid>
       </Grid>
-    </header>
+    </div>
   )
 }
 
