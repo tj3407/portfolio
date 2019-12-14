@@ -3,9 +3,9 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Typography, Button, Grid, Link } from "@material-ui/core"
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 import GithubContent from "./GithubContent"
-import project1 from "../../../images/project1.jpg"
-import project2 from "../../../images/project2.jpg"
-import project3 from "../../../images/project3.jpg"
+import project1 from "../../../img/project1.jpg"
+import project2 from "../../../img/project2.jpg"
+import project3 from "../../../img/project3.jpg"
 
 const useStyle = makeStyles(theme => ({
   root: {
