@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Typography, Avatar, Grid, Button } from "@material-ui/core"
 import SendIcon from "@material-ui/icons/Send"
 import Social from "./social"
-import avatar from "../images/pic1.png"
+import avatar from "../img/pic1.png"
 
 const useStyles = makeStyles(theme => ({
   root: {
