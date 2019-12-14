@@ -18,20 +18,26 @@ const IndexPage = () => {
     }
   `)
 
-  const[show, setShow] = React.useState(false);
+  const [show, setShow] = React.useState(false)
 
   React.useEffect(() => {
     setTimeout(() => {
-      setShow(true);
-    }, 2000);
+      setShow(true)
+    }, 2000)
   }, [])
-  
-  return(
+
+  return (
     <>
-    {show ? (<Layout>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <MainContentLayout />
-    </Layout>) : <div style={{marginTop: "250px", textAlign: "center"}}><CircularProgress size={150}/></div>}
+      {show ? (
+        <Layout>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <MainContentLayout />
+        </Layout>
+      ) : (
+        <div style={{ marginTop: "250px", textAlign: "center" }}>
+          <CircularProgress size={150} />
+        </div>
+      )}
     </>
   )
 }
