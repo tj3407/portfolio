@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from "react"
 import { Typography } from "@material-ui/core"
 
 export default function Time() {
@@ -13,7 +13,12 @@ export default function Time() {
 
   return (
     <div>
-      <Typography>Local Time: {time}</Typography>
-    </div>
+        <Typography>
+          Local Time: 
+          <Suspense fallback={<h1>Loading time...</h1>}>
+            {time}
+          </Suspense>
+        </Typography>
+      </div>
   )
 }
