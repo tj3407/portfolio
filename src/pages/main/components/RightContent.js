@@ -21,6 +21,9 @@ const useStyle = makeStyles(theme => ({
     verticalAlign: "middle",
     marginRight: 20,
   },
+  h5: {
+    marginBottom: "20px"
+  }
 }))
 
 export default function RightContent() {
@@ -29,9 +32,7 @@ export default function RightContent() {
   return (
     <div>
       <About />
-      <div className={classes.root}>
-        <Time />
-      </div>
+      <CodeSnippet />
       <Skills />
     </div>
   )
@@ -63,9 +64,23 @@ const Skills = () => {
 
   return (
     <div className={classes.root}>
-        <Typography variant="h5" display="block" color="textSecondary">
-            Skills
-        </Typography>
+      <Typography variant="h5" display="block" color="textPrimary" className={classes.h5}>
+          Skills
+      </Typography>
+    </div>
+  )
+}
+
+const CodeSnippet = () => {
+  const classes = useStyle()
+
+  return (
+    <div className={classes.root}>
+      <Typography variant="h5" display="block" color="textPrimary" className={classes.h5}>
+        Sample React Components
+      </Typography>
+      <Time />
+      <hr />
     </div>
   )
 }
