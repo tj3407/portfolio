@@ -74,7 +74,7 @@ export default function Time() {
 
   return (
     <div>
-      <Typography>Local Time: {time}</Typography>
+      <Typography paragraph><bold>Local Time:</bold> {time}</Typography>
     </div>
   )
 }`
