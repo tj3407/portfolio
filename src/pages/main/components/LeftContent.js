@@ -45,6 +45,10 @@ const useStyle = makeStyles(theme => ({
   hasRibbon: {
     position: "relative",
     display: "inline-block",
+    transition: "all .2s ease-in-out",
+    "&:hover": {
+      transform: "scale(1.1)"
+    }
   },
   button: {
     textAlign: "center",
@@ -54,6 +58,12 @@ const useStyle = makeStyles(theme => ({
   bold: {
     fontWeight: "600",
   },
+  image: {
+    transition: "all .2s ease-in-out",
+    "&:hover": {
+      transform: "scale(1.1)"
+    }
+  }
 }))
 
 export default function LeftContent() {
@@ -116,7 +126,7 @@ export default function LeftContent() {
           spacing={3}
           style={{ paddingTop: "20px", marginBottom: "20px" }}
         >
-          <Grid item xs={12} lg={4}>
+          <Grid item xs={12} lg={4} className={classes.image}>
             <div style={{ textAlign: "center" }}>
               <img src={project1}></img>
             </div>
@@ -160,7 +170,7 @@ export default function LeftContent() {
           spacing={3}
           style={{ paddingTop: "20px", marginBottom: "20px" }}
         >
-          <Grid item xs={12} lg={4}>
+          <Grid item xs={12} lg={4} className={classes.image}>
             <div style={{ textAlign: "center" }}>
               <img src={project3}></img>
             </div>
@@ -207,7 +217,7 @@ export default function LeftContent() {
           spacing={3}
           style={{ paddingTop: "20px", marginBottom: "20px" }}
         >
-          <Grid item xs={12} lg={4}>
+          <Grid item xs={12} lg={4} className={classes.image}>
             <div style={{ textAlign: "center" }}>
               <img src={project2}></img>
             </div>
