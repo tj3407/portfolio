@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import { Typography } from "@material-ui/core"
+import { Typography, Paper } from "@material-ui/core"
 import LocationOnIcon from "@material-ui/icons/LocationOn"
 import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import LinkIcon from "@material-ui/icons/Link"
@@ -8,10 +8,8 @@ import Time from "./Time"
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "white",
     padding: 40,
     marginBottom: 20,
-    // boxShadow: "0 5px 10px rgba(0,0,0,.15)"
   },
   about: {
     justifyContent: "center",
@@ -42,7 +40,7 @@ const About = () => {
   const classes = useStyle()
 
   return (
-    <div className={classes.root}>
+    <Paper className={classes.root} elevation={0}>
       <Typography variant="body1" className={classes.about} display="block">
         <LocationOnIcon className={classes.icon} />
         Hayward, CA
@@ -55,7 +53,7 @@ const About = () => {
         <LinkIcon className={classes.icon} />
         http://whosnapit.com
       </Typography>
-    </div>
+    </Paper>
   )
 }
 
@@ -63,11 +61,11 @@ const Skills = () => {
   const classes = useStyle()
 
   return (
-    <div className={classes.root}>
+    <Paper className={classes.root} elevation={0}>
       <Typography variant="h5" display="block" color="textPrimary" className={classes.h5}>
           Skills
       </Typography>
-    </div>
+    </Paper>
   )
 }
 
@@ -75,12 +73,12 @@ const CodeSnippet = () => {
   const classes = useStyle()
 
   return (
-    <div className={classes.root}>
+    <Paper className={classes.root} elevation={0}>
       <Typography variant="h5" display="block" color="textPrimary" className={classes.h5}>
         Sample React Components
       </Typography>
       <Time />
       <hr />
-    </div>
+    </Paper>
   )
 }

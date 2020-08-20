@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import { Typography, Button, Grid, Link } from "@material-ui/core"
+import { Typography, Button, Grid, Link, Paper } from "@material-ui/core"
 import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 import GithubContent from "./GithubContent"
 import project1 from "../../../img/project1.jpg"
@@ -12,9 +12,7 @@ const useStyle = makeStyles(theme => ({
   root: {
     marginRight: 50,
     marginBottom: 20,
-    backgroundColor: "white",
     padding: 40,
-    // boxShadow: "0 5px 10px rgba(0,0,0,.15)"
   },
   ribbon: {
     position: "absolute",
@@ -71,7 +69,7 @@ export default function LeftContent() {
 
   return (
     <>
-      <div className={`${classes.root} left-content`}>
+      <Paper className={`${classes.root} left-content`} elevation={0}>
         <Typography
           variant="h4"
           display="block"
@@ -110,7 +108,7 @@ export default function LeftContent() {
         <div className={classes.button}>
           <Button
             variant="outlined"
-            color="primary"
+            color="action"
             size="large"
             startIcon={<ExitToAppIcon />}
             href="http://whosnapit.com/chat-room-app"
@@ -153,10 +151,12 @@ export default function LeftContent() {
                 target="_blank"
                 variant="h6"
                 display="inline"
-                style={{ verticalAlign: "middle", color: "#3AAA64" }}
+                color="inherit"
+                style={{ verticalAlign: "middle" }}
               >
                 <ExitToAppIcon
-                  style={{ verticalAlign: "middle", color: "#3AAA64" }}
+                  style={{ verticalAlign: "middle" }}
+                  color="action"
                 />{" "}
                 Try It
               </Link>
@@ -200,10 +200,12 @@ export default function LeftContent() {
                 target="_blank"
                 variant="h6"
                 display="inline"
-                style={{ verticalAlign: "middle", color: "#3AAA64" }}
+                color="inherit"
+                style={{ verticalAlign: "middle" }}
               >
                 <ExitToAppIcon
-                  style={{ verticalAlign: "middle", color: "#3AAA64" }}
+                  style={{ verticalAlign: "middle" }}
+                  color="action"
                 />{" "}
                 Try It
               </Link>
@@ -244,10 +246,12 @@ export default function LeftContent() {
                 target="_blank"
                 variant="h6"
                 display="inline"
-                style={{ verticalAlign: "middle", color: "#3AAA64" }}
+                color="inherit"
+                style={{ verticalAlign: "middle" }}
               >
                 <ExitToAppIcon
-                  style={{ verticalAlign: "middle", color: "#3AAA64" }}
+                  style={{ verticalAlign: "middle" }}
+                  color="action"
                 />{" "}
                 Try It
               </Link>
@@ -267,8 +271,8 @@ export default function LeftContent() {
             </Typography>
           </Grid>
         </Grid>
-      </div>
-      <div className={`${classes.root} left-content`}>
+      </Paper>
+      <Paper className={`${classes.root} left-content`} elevation={0}>
         <Typography
           variant="h4"
           display="block"
@@ -277,7 +281,7 @@ export default function LeftContent() {
           My GitHub
         </Typography>
         <GithubContent />
-      </div>
+      </Paper>
     </>
   )
 }

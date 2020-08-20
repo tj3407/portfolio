@@ -1,14 +1,16 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
-import { Typography, Avatar, Grid, Button } from "@material-ui/core"
+import { Typography, Avatar, Grid, Button, Paper } from "@material-ui/core"
 import SendIcon from "@material-ui/icons/Send"
 import Social from "./social"
 import avatar from "../img/pic1.png"
+import NightsStayIcon from "@material-ui/icons/NightsStay"
+import WbSunnyIcon from "@material-ui/icons/WbSunny"
+import IconButton from "@material-ui/core/IconButton"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: `white`,
     marginBottom: `1.45rem`,
     margin: `20 auto`,
     padding: `1.45rem 1.0875rem`,
@@ -39,13 +41,18 @@ const useStyles = makeStyles(theme => ({
   secondaryTitle: {
     marginBottom: 20,
   },
+  toggleIcon: {
+    position: "absolute",
+    right: 50
+  }
 }))
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, onClick, theme }) => {
   const classes = useStyles()
+  const icon = !theme ? <WbSunnyIcon /> : <NightsStayIcon />
 
   return (
-    <div className={`${classes.root} header`}>
+    <Paper className={`${classes.root} header`} elevation={0}>
       <Grid container className="header-container">
         <Grid item>
           <Avatar
@@ -93,8 +100,18 @@ const Header = ({ siteTitle }) => {
             </Button>
           </div>
         </Grid>
+        <div className={classes.toggleIcon}>
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="mode"
+            onClick={onClick}
+          >
+            {icon}
+          </IconButton>
+        </div>
       </Grid>
-    </div>
+    </Paper>
   )
 }
 
