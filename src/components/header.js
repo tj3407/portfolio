@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   toggleIcon: {
     position: "absolute",
-    right: 50
+    right: 60
   }
 }))
 
@@ -106,6 +106,7 @@ const Header = ({ siteTitle, onClick, theme }) => {
             color="inherit"
             aria-label="mode"
             onClick={onClick}
+            id="toggle-dark-mode"
           >
             {icon}
           </IconButton>
