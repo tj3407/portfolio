@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   toggleIcon: {
     position: "absolute",
-    right: 60
+    right: 50
   }
 }))
 

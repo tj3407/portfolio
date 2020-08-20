@@ -658,7 +658,6 @@ img:hover {
   border-radius: 50%;
   /* box-shadow: 0 0 0 0 rgba(198, 206, 212, 0.5); */
   animation: pulse 1.5s infinite;
-  padding: 0px;
 }
 
 #toggle-dark-mode svg {
