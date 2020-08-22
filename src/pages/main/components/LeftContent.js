@@ -7,6 +7,7 @@ import project1 from "../../../img/project1.jpg"
 import project2 from "../../../img/project2.jpg"
 import project3 from "../../../img/project3.jpg"
 import project4 from "../../../img/project4.jpg"
+import project5 from "../../../img/project5.png"
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -45,8 +46,8 @@ const useStyle = makeStyles(theme => ({
     display: "inline-block",
     transition: "all .2s ease-in-out",
     "&:hover": {
-      transform: "scale(1.1)"
-    }
+      transform: "scale(1.1)",
+    },
   },
   button: {
     textAlign: "center",
@@ -59,12 +60,12 @@ const useStyle = makeStyles(theme => ({
   image: {
     transition: "all .2s ease-in-out",
     "&:hover": {
-      transform: "scale(1.1)"
-    }
+      transform: "scale(1.1)",
+    },
   },
   iconButton: {
-    borderRadius: 25
-  }
+    borderRadius: 25,
+  },
 }))
 
 export default function LeftContent() {
@@ -87,7 +88,7 @@ export default function LeftContent() {
           align="center"
           className={classes.bold}
         >
-          Chat Room App
+          PPEGiveBack.org
         </Typography>
         <Typography
           paragraph
@@ -95,18 +96,18 @@ export default function LeftContent() {
           color="textSecondary"
           align="center"
         >
-          React, Material-UI
+          React, Firebase, Material UI
         </Typography>
         <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
-          <img src={project4}></img>
+          <img src={project5}></img>
           <div className={classes.ribbon}>
             <div className={classes.text}>New</div>
           </div>
         </div>
         <Typography paragraph>
-          Pure front-end chat/messaging app created using React and Material UI
-          for styling. Data retrieved from local file and implemented simple
-          auto reply with every new message submission.
+          Devpost COVID19 Global Hackathon submission - sole developer. A platform for people and
+          organization to donate personal protective equipment to essential
+          workers. Serverless application using Firebase.
         </Typography>
         <div className={classes.button}>
           <Button
@@ -115,12 +116,59 @@ export default function LeftContent() {
             size="large"
             className={classes.iconButton}
             startIcon={<ExitToAppIcon />}
-            href="http://whosnapit.com/chat-room-app"
+            href="http://ppegiveback.org"
             target="_blank"
           >
             Demo
           </Button>
         </div>
+        <hr />
+
+        <Grid
+          container
+          spacing={3}
+          style={{ paddingTop: "20px", marginBottom: "20px" }}
+        >
+          <Grid item xs={12} lg={4} className={classes.image}>
+            <div style={{ textAlign: "center" }}>
+              <img src={project4}></img>
+            </div>
+          </Grid>
+
+          <Grid item xs={12} lg={8}>
+            <Typography
+              variant="h5"
+              display="block"
+              color="textSecondary"
+              align="left"
+              className={classes.bold}
+              style={{ marginBottom: "20px" }}
+            >
+              Chat Room App
+            </Typography>
+            <Typography paragraph>
+              Pure front-end chat/messaging app created using React and Material
+              UI for styling. Data retrieved from local file and implemented
+              simple auto reply with every new message submission.
+            </Typography>
+            <div style={{ cursor: "pointer" }}>
+              <Link
+                href="http://whosnapit.com/chat-room-app"
+                target="_blank"
+                variant="h6"
+                display="inline"
+                color="inherit"
+                style={{ verticalAlign: "middle" }}
+              >
+                <ExitToAppIcon
+                  style={{ verticalAlign: "middle" }}
+                  color="action"
+                />{" "}
+                Try It
+              </Link>
+            </div>
+          </Grid>
+        </Grid>
         <hr />
 
         <Grid
@@ -264,7 +312,7 @@ export default function LeftContent() {
         </Grid>
         <hr />
 
-        <Grid
+        {/* <Grid
           container
           spacing={3}
           style={{ paddingTop: "20px", marginBottom: "20px" }}
@@ -274,7 +322,7 @@ export default function LeftContent() {
               ...LOAD MORE
             </Typography>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Paper>
       <Paper className={`${classes.root} left-content`} elevation={0}>
         <Typography
