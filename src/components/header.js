@@ -30,8 +30,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900,
   },
   button: {
-    padding: "10px",
+    padding: 15,
     marginTop: 10,
+    borderRadius: 30
   },
   buttonContainer: {
     display: "flex",

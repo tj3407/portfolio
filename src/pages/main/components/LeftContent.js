@@ -61,6 +61,9 @@ const useStyle = makeStyles(theme => ({
     "&:hover": {
       transform: "scale(1.1)"
     }
+  },
+  iconButton: {
+    borderRadius: 25
   }
 }))
 
@@ -110,6 +113,7 @@ export default function LeftContent() {
             variant="outlined"
             color="action"
             size="large"
+            className={classes.iconButton}
             startIcon={<ExitToAppIcon />}
             href="http://whosnapit.com/chat-room-app"
             target="_blank"
