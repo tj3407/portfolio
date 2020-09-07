@@ -4,6 +4,8 @@ import project3 from "../img/project3.jpg"
 import project4 from "../img/project4.jpg"
 import project5 from "../img/project5.png"
 import project6 from "../img/project6.gif"
+import project7 from "../img/project7.gif"
+import project8 from "../img/project8.gif"
 
 export const mainProject = {
     title: "PPEGiveBack.org",
@@ -20,6 +22,20 @@ export const projects = [
         description: "Integrating Okta library for login and registration in a create-react-app project and using Okta's SecuredRoute component to manage visibility of pages based on authentication status.",
         img: project6,
         href: "http://whosnapit.netlify.app/",
+        button: "Try It",
+    },
+    {
+        title: "Registration Form",
+        description: "Responsive registration form with validation on submission. Designed to be scalable using reusable components.",
+        img: project7,
+        href: "http://whosnapit.com/registration-page-react/",
+        button: "Try It",
+    },
+    {
+        title: "Category Pages",
+        description: "Simple react app with redux. Changes contents based on authentication state on redux store.",
+        img: project8,
+        href: "http://whosnapit.com/category-page-react/",
         button: "Try It",
     },
     {
