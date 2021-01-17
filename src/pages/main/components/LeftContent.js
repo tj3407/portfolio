@@ -94,15 +94,16 @@ export default function LeftContent() {
         >
           {mainProject.subheading}
         </Typography>
-        <div style={{ textAlign: "center" }} className={classes.hasRibbon}>
-          <img src={mainProject.img}></img>
+        <div
+          style={{ textAlign: "center", width: "100%" }}
+          className={classes.hasRibbon}
+        >
+          <img src={mainProject.img} style={{ width: "100%" }}></img>
           <div className={classes.ribbon}>
             <div className={classes.text}>New</div>
           </div>
         </div>
-        <Typography paragraph>
-          {mainProject.description}
-        </Typography>
+        <Typography paragraph>{mainProject.description}</Typography>
         <div className={classes.button}>
           <Button
             variant="outlined"
