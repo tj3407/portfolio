@@ -34,6 +34,7 @@ const IndexPage = () => {
       site {
         siteMetadata {
           title
+          image
         }
       }
     }
